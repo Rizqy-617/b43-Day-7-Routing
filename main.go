@@ -67,6 +67,7 @@ func addProject(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Start-date : " + r.PostForm.Get("start-date"))
 	fmt.Println("End-date : " + r.PostForm.Get("end-date"))
 	fmt.Println("Description : " + r.PostForm.Get("description"))
+	fmt.Println("Technologies : ", r.Form["technologies"])
 	
 	http.Redirect(w, r, "/", http.StatusMovedPermanently)
 }
